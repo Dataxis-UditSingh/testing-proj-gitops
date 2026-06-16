@@ -20,7 +20,7 @@ spec:
   secretRef:
     name: flux-system
   timeout: 60s
-  url: https://github.com/uditdataxis12345/testing-proj-gitops
+  url: https://github.com/Dataxis-UditSingh/testing-proj-gitops.git
 status:
   artifact:
     digest: sha256:6d021bde538543baba0e5c3a81415351b3ecee880f8275c326eb47256afc0e5d
