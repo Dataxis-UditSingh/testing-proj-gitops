@@ -17,7 +17,7 @@ spec:
         - name: dockerhub-credentials
       containers:
         - name: react-app
-          image: uditdataxis12345/testing-proj-cicd:20260616042916-7169a019 # {"$imagepolicy": "flux-system:react-app"}
+          image: uditdataxis12345/testing-proj-cicd:20260616073758-078447bf # {"$imagepolicy": "flux-system:react-app"}
           imagePullPolicy: Always
           ports:
             - containerPort: 80
