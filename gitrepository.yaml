@@ -1,0 +1,46 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"source.toolkit.fluxcd.io/v1","kind":"GitRepository","metadata":{"annotations":{},"name":"flux-system","namespace":"flux-system"},"spec":{"interval":"1m0s","ref":{"branch":"main"},"secretRef":{"name":"flux-system"},"url":"ssh://git@github.com/Dataxis-UditSingh/Testing_proj_CICD"}}
+    reconcile.fluxcd.io/requestedAt: "2026-06-12T16:29:14Z"
+  creationTimestamp: "2026-05-21T08:30:13Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 3
+  name: flux-system
+  namespace: flux-system
+  resourceVersion: "799534"
+  uid: 4e1eefd5-d249-46dc-a7e4-acd64573c0b4
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: flux-system
+  timeout: 60s
+  url: https://github.com/uditdataxis12345/testing-proj-gitops
+status:
+  artifact:
+    digest: sha256:6d021bde538543baba0e5c3a81415351b3ecee880f8275c326eb47256afc0e5d
+    lastUpdateTime: "2026-06-16T04:31:44Z"
+    path: gitrepository/flux-system/flux-system/c160a41818341e21fde55dd12bc2688b67e4612e.tar.gz
+    revision: main@sha1:c160a41818341e21fde55dd12bc2688b67e4612e
+    size: 85712
+    url: http://source-controller.flux-system.svc.cluster.local./gitrepository/flux-system/flux-system/c160a41818341e21fde55dd12bc2688b67e4612e.tar.gz
+  conditions:
+  - lastTransitionTime: "2026-06-16T06:05:11Z"
+    message: stored artifact for revision 'main@sha1:c160a41818341e21fde55dd12bc2688b67e4612e'
+    observedGeneration: 3
+    reason: Succeeded
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2026-06-16T04:31:44Z"
+    message: stored artifact for revision 'main@sha1:c160a41818341e21fde55dd12bc2688b67e4612e'
+    observedGeneration: 3
+    reason: Succeeded
+    status: "True"
+    type: ArtifactInStorage
+  lastHandledReconcileAt: "2026-06-12T16:29:14Z"
+  observedGeneration: 3
