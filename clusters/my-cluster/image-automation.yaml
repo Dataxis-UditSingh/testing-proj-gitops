@@ -1,0 +1,51 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: react-app
+  namespace: flux-system
+spec:
+  image: uditdataxis12345/testing-proj-cicd
+  interval: 1m0s
+  secretRef:
+    name: dockerhub-credentials
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: react-app
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: react-app
+  filterTags:
+    pattern: '^([0-9]{14})-[a-f0-9]{8}$'
+    extract: '$1'
+  policy:
+    numerical:
+      order: asc
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageUpdateAutomation
+metadata:
+  name: react-app
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        name: fluxcd-bot
+        email: fluxcd-bot@users.noreply.github.com
+      messageTemplate: "ci: update react-app image [skip ci]"
+    push:
+      branch: main
+  update:
+    strategy: Setters
+    path: ./clusters/my-cluster/apps/react-app
