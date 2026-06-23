@@ -1,3 +1,5 @@
 resources:
   - ./apps/react-app
   - ./image-automation.yaml
+  - ../minikube/dev-kustomization.yaml
+  - ../minikube/prod-kustomization.yaml
