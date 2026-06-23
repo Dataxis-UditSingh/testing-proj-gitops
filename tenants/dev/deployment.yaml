@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app-dev
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: react-app-dev
+
+  template:
+    metadata:
+      labels:
+        app: react-app-dev
+
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-credentials
+
+      containers:
+        - name: react-app
+          image: uditdataxis12345/testing-proj-cicd:20260618063958-950bfe15
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 80
