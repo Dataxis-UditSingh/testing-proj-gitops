@@ -6,7 +6,7 @@ metadata:
 
 spec:
   interval: 1m
-  path: ./tenants/prod
+  path: ./clusters/my-cluster/tenants/prod
   prune: true
 
   sourceRef:
