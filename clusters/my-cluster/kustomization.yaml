@@ -1,5 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
 resources:
   - ./apps/react-app
   - ./image-automation.yaml
-  - ../minikube/dev-kustomization.yaml
-  - ../minikube/prod-kustomization.yaml
+  - ./dev-kustomization.yaml
+  - ./prod-kustomization.yaml
