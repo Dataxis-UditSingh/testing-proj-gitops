@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
   - ./apps/react-app
   - ./image-automation.yaml
-  - ./dev-kustomization.yaml
-  - ./prod-kustomization.yaml
+  - ./tenants/dev
+  - ./tenants/prod
