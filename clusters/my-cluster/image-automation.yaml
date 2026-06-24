@@ -48,4 +48,4 @@ spec:
       branch: main
   update:
     strategy: Setters
-    path: ./clusters/my-cluster/apps/react-app
+    path: ./clusters/my-cluster
