@@ -1,0 +1,46 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"source.toolkit.fluxcd.io/v1","kind":"GitRepository","metadata":{"annotations":{"reconcile.fluxcd.io/requestedAt":"2026-06-16T15:00:05.788274+05:30"},"creationTimestamp":"2026-05-21T08:30:13Z","finalizers":["finalizers.fluxcd.io"],"generation":6,"name":"flux-system","namespace":"flux-system","resourceVersion":"893596","uid":"4e1eefd5-d249-46dc-a7e4-acd64573c0b4"},"spec":{"interval":"1m0s","ref":{"branch":"main"},"secretRef":{"name":"flux-system"},"timeout":"60s","url":"http://host.minikube.internal:9080/root/testing-proj-gitops.git"},"status":{"artifact":{"digest":"sha256:bc8d92c1fbd29a9790f2bee9257839c96f28315f8dac06451e70d3c2b78abb92","lastUpdateTime":"2026-06-18T06:41:06Z","path":"gitrepository/flux-system/flux-system/f4ec30c4202cb79248bf32151fc9cefd0b3d9805.tar.gz","revision":"main@sha1:f4ec30c4202cb79248bf32151fc9cefd0b3d9805","size":38760,"url":"http://source-controller.flux-system.svc.cluster.local./gitrepository/flux-system/flux-system/f4ec30c4202cb79248bf32151fc9cefd0b3d9805.tar.gz"},"conditions":[{"lastTransitionTime":"2026-06-18T06:41:06Z","message":"stored artifact for revision 'main@sha1:f4ec30c4202cb79248bf32151fc9cefd0b3d9805'","observedGeneration":6,"reason":"Succeeded","status":"True","type":"Ready"},{"lastTransitionTime":"2026-06-18T06:41:06Z","message":"stored artifact for revision 'main@sha1:f4ec30c4202cb79248bf32151fc9cefd0b3d9805'","observedGeneration":6,"reason":"Succeeded","status":"True","type":"ArtifactInStorage"}],"lastHandledReconcileAt":"2026-06-16T15:00:05.788274+05:30","observedGeneration":6}}
+    reconcile.fluxcd.io/requestedAt: "2026-06-24T12:59:23.144719+05:30"
+  creationTimestamp: "2026-05-21T08:30:13Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 8
+  name: flux-system
+  namespace: flux-system
+  resourceVersion: "1307149"
+  uid: 4e1eefd5-d249-46dc-a7e4-acd64573c0b4
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: gitlab-auth
+  timeout: 60s
+  url: http://host.minikube.internal:9080/root/testing-proj-gitops.git
+status:
+  artifact:
+    digest: sha256:4a5241c785133183bd9ec7fafd7e7801cb557ca4c4cf3859ce045a5859a7d793
+    lastUpdateTime: "2026-06-24T07:15:48Z"
+    path: gitrepository/flux-system/flux-system/d35e64896d47e22a82c4e008df5b5a9f04ebd788.tar.gz
+    revision: main@sha1:d35e64896d47e22a82c4e008df5b5a9f04ebd788
+    size: 39167
+    url: http://source-controller.flux-system.svc.cluster.local./gitrepository/flux-system/flux-system/d35e64896d47e22a82c4e008df5b5a9f04ebd788.tar.gz
+  conditions:
+  - lastTransitionTime: "2026-06-24T07:15:48Z"
+    message: stored artifact for revision 'main@sha1:d35e64896d47e22a82c4e008df5b5a9f04ebd788'
+    observedGeneration: 8
+    reason: Succeeded
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2026-06-24T07:15:48Z"
+    message: stored artifact for revision 'main@sha1:d35e64896d47e22a82c4e008df5b5a9f04ebd788'
+    observedGeneration: 8
+    reason: Succeeded
+    status: "True"
+    type: ArtifactInStorage
+  lastHandledReconcileAt: "2026-06-24T12:59:23.144719+05:30"
+  observedGeneration: 8
